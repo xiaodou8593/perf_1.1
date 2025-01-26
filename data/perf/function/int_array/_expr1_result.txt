@@ -1,0 +1,26 @@
+powerload perf start
+powerload perf done
+
+int_array/list_impl perf start
+int_array/list_impl perf done
+--- int_array/list_impl perf result ---
+cnt: 10    n: 1000000
+min: 12542    max: 13059
+avg: 12574    err: 3%
+scb_add: 11.65
+
+int_array/array_impl perf start
+int_array/array_impl perf done
+--- int_array/array_impl perf result ---
+cnt: 10    n: 1000000
+min: 12627    max: 12929
+avg: 12684    err: 1%
+scb_add: 11.77
+
+int_array/comp_impl perf start
+int_array/comp_impl perf done
+--- int_array/comp_impl perf result ---
+cnt: 10    n: 1000000
+min: 11886    max: 12193
+avg: 12003    err: 1%
+scb_add: 11.04
