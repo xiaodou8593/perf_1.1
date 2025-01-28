@@ -22,8 +22,6 @@ data modify storage perf:io afk set value ["benchmark"]
 
 等待运行结果，误差在可接受范围内即可
 
-**由于未知bug, worldborder有时候测时间是0，min的值变为0，这种情况需要重测**
-
 ## 新建性能测试项目
 
 复制template文件夹，重新命名为测试项目名称
@@ -51,11 +49,11 @@ n是递归次数，也就是单个tick运行多少次测试命令
 
 min, max, avg分别是单个样本运行时间的最小值，最大值，平均值，单位是ms
 
-**由于未知bug, worldborder有时候测时间是0，min的值变为0，这种情况需要重测**
-
 err是最大误差，它的算法是：err = 取最大值{(max-avg)/avg, (avg-min)/avg}
 
 作者一般要求err在10%以内属于可接受，不过严谨的阈值还可以讨论
+
+记分板常量<perf_check, int>表示的是自动重测的err阈值，默认设置为8
 
 scb_add表示测试命令约合多少条记分板加法命令(也就是benchmark)，它自动计算了n的影响
 

@@ -22,3 +22,8 @@ scoreboard players operation perf_err int > sstemp int
 scoreboard players operation perf_err int *= 100 int
 scoreboard players operation perf_err int /= perf_avg int
 tellraw @a ["avg: ",{"score":{"name":"perf_avg","objective":"int"}},"    err: ",{"score":{"name":"perf_err","objective":"int"}},"%"]
+
+# 超过阈值重测
+execute if score perf_err int <= perf_check int run return 0
+tellraw @a "scb_add perf restart"
+data modify storage perf:io afk prepend value "scb_add"
