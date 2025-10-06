@@ -1,4 +1,4 @@
-#perf:utils/string/_match
+#perf:utils/string/_find
 # 把字符串转动到第一个匹配的位置，并计算匹配长度
 # 输入matcher列表storage math:io input
 # 输出<res,int>表示匹配长度，0是不匹配

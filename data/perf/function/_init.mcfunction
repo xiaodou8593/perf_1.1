@@ -22,3 +22,6 @@ schedule function perf:tick 1t replace
 
 # 重测阈值
 scoreboard players set perf_check int 8
+
+# 初始化正则表达式模块
+function perf:utils/string/init
